@@ -8,7 +8,7 @@ should_continue = True
 
 while should_continue:
     direction = input('Type \'encrypt\' to encrypt or \'decrypt\' to decrypt: ').lower()
-    text = input('Type your message: ').lower()
+    text = input('Type your message: ')
     shift = int(input('Type the shift number: '))
     if shift > len(key):
         shift = shift % len(key)
@@ -17,5 +17,3 @@ while should_continue:
     if result == 'no':
         should_continue = False
         print('Thank you')
-    
-
