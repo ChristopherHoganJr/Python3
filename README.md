@@ -1,6 +1,7 @@
 # Python 3 projects
 
 ### 100 Days of Python
+- Day 10 (2020/12/08) - leapYear.py, yearDictionary.py
 - Day 9 (2020/12/07) - dictionaryInList.py, gradingProgram.py, silentAuction.py
 - Day 8 (2020/12/06) - areaCalculator.py, primeNumberChecker.py, caesarCipher.py
 - Day 7 (2020/12/05) - Hangman.py
