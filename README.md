@@ -1,6 +1,7 @@
 # Python 3 projects
 
 ### 100 Days of Python
+- Day 12 (2020/12/10) - blackjack game
 - Day 11 (2020/12/09) - calculator app
 - Day 10 (2020/12/08) - leapYear.py, yearDictionary.py
 - Day 9 (2020/12/07) - dictionaryInList.py, gradingProgram.py, silentAuction.py

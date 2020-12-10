@@ -1,55 +1,54 @@
-import random
-
-def createDeck():
-    playing_cards = []
-    for i in range(52):
-        if i % 13 + 1 > 10:
-            playing_cards.append(10)
-        elif i % 13 + 1 == 1:
-            playing_cards.append(11)
-        else:
-            playing_cards.append(i % 13 + 1)
-    return playing_cards
-
-
-
-# Create playing deck
-playing_deck = createDeck()
-print(playing_deck)
-# Initiate player 1's hand
-player1_hand = []
-# Initiate dealer's(computer's) hand
-dealer_hand = []
-
-def dealCard(deck=playing_deck):
-    card = random.choice(deck)
-    return card
-
-def calculate_score(cards):
-    if sum(cards) == 21 and len(cards) == 2:
-        return 0
-    if 11 in cards and sum(cards) > 21:
-        cards.remove(11)
-        cards.append(1)
-    return sum(cards)
+import os
+from blackjack_art import logo
+from blackjack_functions import createDeck, dealCard, calculate_score, compare
 
 def play_game():
-    # Get users name
-    player_1 = input('What is your name: ')
-    print(f'Hello, {player_1}, welcome to blackjack!')
-    print('##########################################')
-    # Start game
-    for i in range(2):
-        player1_hand.append(dealCard())
-        dealer_hand.append(dealCard())
-    print(player1_hand)
+    # Initiating start of game
+    os.system('cls')
+    playing_deck = createDeck()
+    user_cards = []
+    computer_cards = []
+    players_turn = True
+    computers_turn = False
+
+    print(logo)
+    print('Welcome to Python Blackjack')
+    # Deals 2 cards to players
+    for _ in range(2):
+        user_cards.append(dealCard(playing_deck))
+        computer_cards.append(dealCard(playing_deck))
 
 
+    while players_turn:
+        # Adds up the score of players
+        user_score = calculate_score(user_cards)
+        computer_score = calculate_score(computer_cards)
+        print(f'    Your cards: {user_cards}, current score: {user_score}')
+        print(f'    Computer\'s first card: {computer_cards[0]}')
 
+        if user_score == 0 or computer_score == 0 or user_score > 21:
+            players_turn = False
+        else:
+            user_should_deal = input('Type \'y\' to get another card, type \'n\' to pass: ')
+            if user_should_deal == 'y':
+                user_cards.append(dealCard(playing_deck))
+            else:
+                players_turn = False
+                computers_turn = True
 
+    while computers_turn:
+        while computer_score != 0 and computer_score < 17:
+            computer_cards.append(dealCard(playing_deck))
+            computer_score = calculate_score(computer_cards)
+        computers_turn = False
 
+    print(f'Your cards: {user_cards}')
+    print(f'Computer\'s cards: {computer_cards}')
+    print(compare(user_score,computer_score))
 
-play_game()
+    play_again = input('Do you want to play another game of Blackjack? Type \'yes\' or \'no\': ').lower()
+    if play_again == 'yes' or play_again == 'y':
+        os.system('cls')
+        play_game()
     
-
-
+play_game()
