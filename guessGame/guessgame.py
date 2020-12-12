@@ -1,11 +1,12 @@
 import random
 import os
-from guessLogic import setGameMode, setGuesses
+from guessLogic import logo, setGameMode, setGuesses
 
 # Clear screen
 os.system('cls')
 
 # Introduction to game
+print(logo)
 print('Welcome to the Guess Game\n')
 print('The object of the game is to guess the number correctly. Remember, the number will be between 1 and 100.\n')
 

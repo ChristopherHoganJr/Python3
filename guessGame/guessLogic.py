@@ -1,3 +1,9 @@
+logo = '''
+ +-+-+-+-+-+ +-+-+-+-+
+ |G|u|e|s|s| |G|a|m|e|
+ +-+-+-+-+-+ +-+-+-+-+
+ '''
+
 def setGameMode():
     print('+++ Select Game Mode +++')
     print('Easy mode will give you 10 chances and hard mode will give you 5.')
