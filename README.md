@@ -1,6 +1,7 @@
 # Python 3 projects
 
 ### 100 Days of Python
+- Day 16 (2020/12/15) - Coffee Machine App
 - Day 15 (2020/12/14) - Higher Lower game
 - Day 14 (2020/12/12) - Added saving score capabilities to coinFLip.py. Refactored entire codebase. 
 - Day 13 (2020/12/11) - Guess Game - game/flowchart
