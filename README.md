@@ -1,10 +1,12 @@
 # Python 3 projects
 
 ### 100 Days of Python
+
+- Day 18 (2020/12/21) - Turtle and Colorgram modules
 - Day 17 (2020/12/16) - Quiz with OOP
 - Day 16 (2020/12/15) - Coffee Machine App
 - Day 15 (2020/12/14) - Higher Lower game
-- Day 14 (2020/12/12) - Added saving score capabilities to coinFLip.py. Refactored entire codebase. 
+- Day 14 (2020/12/12) - Added saving score capabilities to coinFLip.py. Refactored entire codebase.
 - Day 13 (2020/12/11) - Guess Game - game/flowchart
 - Day 12 (2020/12/10) - blackjack game
 - Day 11 (2020/12/09) - calculator app
