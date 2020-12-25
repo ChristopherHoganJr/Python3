@@ -2,6 +2,7 @@
 
 ### 100 Days of Python
 
+- Day 21 (2020/12/24) - Added food, scoreboard, and collision detection to snake game
 - Day 20 (2020/12/23) - Added start and finish line to turtle_race, created base functionality to 'snake' game
 - Day 19 (2020/12/22) - With Turtle: etch-a-sketch & turtle_race
 - Day 18 (2020/12/21) - Turtle and Colorgram modules
