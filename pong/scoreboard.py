@@ -12,9 +12,9 @@ class Scoreboard(Turtle):
 
     def update_scoreboard(self):
         self.clear()
-        self.goto(-100,200)
+        self.goto(-300,310)
         self.write(f'Player 1: {self.l_score}', align='center', font=('Courier', 20, 'normal'))
-        self.goto(100,200)
+        self.goto(300,310)
         self.write(f'Player 2: {self.r_score}', align='center', font=('Courier', 20, 'normal'))
 
     def l_point(self):
