@@ -28,12 +28,14 @@ finish_line.showturtle()
 screen.update()
 
 # Enter a text input
-user_bet = screen.textinput(title='make your bet', prompt='which turtle will in the race? Enter a color: ').lower()
+user_bet = screen.textinput(title='Place your bet', prompt='which turtle will in the race? Enter a color: ').lower()
 colors = ['red','orange','black','green','blue','purple']
 y_positions = [-70, -40, -10, 20, 50, 80]
 all_turtles = []
 
+# Turn tracer back on so turtle have animation
 screen.tracer(True)
+
 for i in range(len(colors)):
     new_turtle = Turtle(shape='turtle')
     new_turtle.color(colors[i])
