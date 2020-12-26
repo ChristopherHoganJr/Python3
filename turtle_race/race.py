@@ -3,13 +3,13 @@ import random
 
 is_race_on = False
 screen = Screen()
-
+screen.tracer(0)
 # Add starting and finish line
 screen.register_shape('race_line', ((-150, 2), (-150,-2), (150,-2), (150,2)))
 
 # Set screen up (width, height)
 screen.setup(width=1000,height=400)
-
+screen.title('PyRacing - Turtle Racing')
 # Starting Line
 starting_line = Turtle(shape='race_line')
 starting_line.hideturtle()
@@ -25,12 +25,15 @@ finish_line.setx(450)
 starting_line.showturtle()
 finish_line.showturtle()
 
+screen.update()
+
 # Enter a text input
 user_bet = screen.textinput(title='make your bet', prompt='which turtle will in the race? Enter a color: ').lower()
 colors = ['red','orange','black','green','blue','purple']
 y_positions = [-70, -40, -10, 20, 50, 80]
 all_turtles = []
 
+screen.tracer(True)
 for i in range(len(colors)):
     new_turtle = Turtle(shape='turtle')
     new_turtle.color(colors[i])
