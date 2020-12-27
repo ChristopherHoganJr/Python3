@@ -2,6 +2,7 @@
 
 ### 100 Days of Python
 
+- Day 23 (2020/12/26) - Turtle Crossing ('Frogger Clone') Game
 - Day 22 (2020/12/25) - Created 'pong' game
 - Day 21 (2020/12/24) - Added food, scoreboard, and collision detection to snake game
 - Day 20 (2020/12/23) - Added start and finish line to turtle_race, created base functionality to 'snake' game
